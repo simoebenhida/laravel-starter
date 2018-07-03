@@ -18,7 +18,7 @@ What it includes:
 
 
 ```
-composer require  --dev
+composer require mohamedbenhida/laravelstart --dev
 ```
 
 Finally, run this command:
