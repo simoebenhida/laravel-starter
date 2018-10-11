@@ -10,7 +10,7 @@ use Illuminate\Foundation\Console\Presets\Preset as BasePreset;
 class Preset extends BasePreset
 {
     public static $removeBootstrap = false;
-    
+
     public static function setUpTailwind()
     {
         static::ensureComponentDirectoryExists();
@@ -61,7 +61,7 @@ class Preset extends BasePreset
             }
         });
 
-        copy(__DIR__.'/stubs/resources/assets/css/app.css', resource_path('assets/css/app.css'));
+        copy(__DIR__.'/stubs/resources/assets/css/app.css', resource_path('css/app.css'));
     }
 
     protected static function updateJavaScript()
@@ -70,8 +70,8 @@ class Preset extends BasePreset
             $files->delete(public_path('js/app.js'));
         });
 
-        copy(__DIR__.'/stubs/app.js', resource_path('assets/js/app.js'));
-        copy(__DIR__.'/stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
+        copy(__DIR__.'/stubs/app.js', resource_path('js/app.js'));
+        copy(__DIR__.'/stubs/bootstrap.js', resource_path('js/bootstrap.js'));
     }
 
     protected static function updateTemplates()
